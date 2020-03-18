@@ -40,3 +40,21 @@ function isSameNum(num1, num2) {
     return true;
   } else return false;
 }
+
+// Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num up to length.
+
+function arrayOfMultiples(num, length) {
+  let x = [];
+  for (let i = 1; i <= length; i++) {
+    x.push(i * num);
+  }
+  return x;
+}
+
+// Create a function that takes in three arguments (prob, prize, pay) and returns true if prob * prize > pay; otherwise return false.
+
+function profitableGamble(prob, prize, pay) {
+  if (prob * prize > pay) {
+    return true;
+  } else return false;
+}
