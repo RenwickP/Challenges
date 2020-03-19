@@ -58,3 +58,44 @@ function profitableGamble(prob, prize, pay) {
     return true;
   } else return false;
 }
+
+// Given a total due and an array representing the amount of change in your pocket, determine whether or not you are able to pay for the item. Change will always be represented in the following order: quarters, dimes, nickels, pennies.
+
+// To illustrate: changeEnough([25, 20, 5, 0], 4.25) should yield true, since having 25 quarters, 20 dimes, 5 nickels and 0 pennies gives you 6.25 + 2 + .25 + 0 = 8.50.
+
+function changeEnough(change, amountDue) {
+  let x = 0;
+  let y = [0.25, 0.1, 0.05, 0.01];
+  for (let i = 0; i <= change.length - 1; i++) {
+    x += change[i] * y[i];
+  }
+  if (x >= amountDue) {
+    return true;
+  } else return false;
+}
+
+// Write a function that takes two integers (hours, minutes) and converts them into seconds.
+
+function convert(hours, minutes) {
+  return hours * 3600 + minutes * 60;
+}
+
+// String Reverse
+
+function reverse(str) {
+  let revStr = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    revStr += str[i];
+  }
+  return revStr;
+}
+
+// Create a function that takes a number (from 1 - 60) and returns a corresponding string of hyphens.
+
+function Go(num) {
+  let fun = "";
+  for (let i = 1; i <= num; i++) {
+    fun += "-";
+  }
+  return fun;
+}
