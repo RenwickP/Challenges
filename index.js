@@ -99,3 +99,15 @@ function Go(num) {
   }
   return fun;
 }
+
+// Create a function that counts the number of syllables a word has. Each syllable is separated with a dash -.
+
+function numberSyllables(word) {
+  let count = 1;
+  for (let i = 0; i <= word.length - 1; i++) {
+    if (word[i] == "-") {
+      count += 1;
+    }
+  }
+  return count;
+}
